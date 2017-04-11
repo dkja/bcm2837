@@ -1,0 +1,13 @@
+
+language: cpp
+compiler: arm-linux-gnueabihf-g++
+
+before_install:
+  - export CXX=arm-linux-gnueabihf-g++
+  - export CXX=arm-linux-gnueabihf-gcc
+
+install: 
+  - sudo apt-get install -qq g++-arm-linux-gnueabihf cmake make
+
+script:
+  - mkdir build && cd build && cmake ..
