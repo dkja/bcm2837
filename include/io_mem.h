@@ -17,7 +17,9 @@ class IO_mem
   public:
     volatile void*  get();
     uint64_t        size();
-    static IO_mem&         instance();
+    static IO_mem&  instance();
+
+    ~IO_mem();
 
   protected:
     IO_mem();
@@ -26,8 +28,8 @@ class IO_mem
 
     static uint64_t read_io_base_and_size(uint64_t* out_size, const char* filename);
 
-    volatile void* _io_memory;
-    uint64_t       _size; 
+    volatile void*  _io_memory;
+    uint64_t        _size; 
 };
 
 

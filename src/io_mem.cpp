@@ -4,6 +4,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h> 
 #include <fcntl.h>
+#include <unistd.h>
 
 #include "io_mem.h"
 #include "defines.h"
@@ -40,6 +41,11 @@ IO_mem& IO_mem::instance()
 }
 
 
+IO_mem::~IO_mem()
+{
+    munmap( (void*) _io_memory, _size);
+}
+
 ///
 ///	Map IO mamory to virtual memory
 ///
@@ -56,6 +62,7 @@ IO_mem::IO_mem()
     _io_memory = mmap(NULL, _size, (PROT_READ | PROT_WRITE), MAP_SHARED, memfd, base);
     if(_io_memory == MAP_FAILED)
         throw bcm2837_error{"mmap failed: ", true};
+    close(memfd);
 }
 
 
