@@ -59,7 +59,9 @@ class GPIO_driver
 {
 public:
     void set_function(GPIO_pins pin, Funct fs);
-
+    void set(GPIO_pins pin);
+    void clear(GPIO_pins);
+    bool value(GPIO_pins);
 
     static GPIO_driver& instance();
 protected:
