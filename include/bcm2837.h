@@ -3,6 +3,7 @@
 
 #include "defines.h"
 #include "io_mem.h"
+#include "gpio.h"
 
 
 
