@@ -19,10 +19,16 @@ class IO_mem
     uint64_t        size();
     static IO_mem&  instance();
 
-    ~IO_mem();
 
   protected:
     IO_mem();
+
+    IO_mem( const IO_mem&) = delete;
+    IO_mem( IO_mem&& ) = delete;
+    IO_mem& operator=( const IO_mem&) = delete;
+    IO_mem& operator=( IO_mem&& ) = delete;
+
+    virtual ~IO_mem();
 
   private:
 
