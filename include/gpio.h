@@ -66,6 +66,12 @@ public:
     static GPIO_driver& instance();
 protected:
     GPIO_driver();
+    
+    GPIO_driver(const GPIO_driver&) = delete;
+    GPIO_driver(GPIO_driver&&) = delete;
+    GPIO_driver& operator=( const GPIO_driver& ) = delete;
+    GPIO_driver& operator=( GPIO_driver&& ) = delete;
+
     virtual ~GPIO_driver();
 
     static void set_bits(volatile uint32_t*addr, uint32_t val, uint32_t mask);
