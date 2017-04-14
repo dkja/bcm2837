@@ -21,13 +21,13 @@ namespace BMC2837
 
 /// Base Address of GPIO registers
 #define GPIO_BASE       0x200000  
-#define GPIO_REG_SIZE   0x32
+#define GPIO_REG_SIZE   32
 
 
 /// GPIO registers:
 #define GPFSEL      0x0000
-    #define FSEL_SIZE   3
-    #define PINS_PER_REG (GPIO_REG_SIZE / FSEL_SIZE)
+    #define FSEL_SIZE       3
+    #define PINS_PER_REG    (GPIO_REG_SIZE / FSEL_SIZE)
 #define GPSET       0x001C
 #define GPCLR       0x0028
 #define GPLEV       0x0034

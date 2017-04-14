@@ -1,4 +1,5 @@
 
+v0.1.1      - invalid GPIO_REG_SIZE value
 
 v0.1
     * IO_mem    - map physical I/O-memory to virtual memory and access it.
