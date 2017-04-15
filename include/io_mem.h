@@ -10,7 +10,7 @@ namespace BCM2837
 ///
 ///  Virtual memory mapped into IO registers
 ///
-///  There is only one instance for app.
+///  \note There is only one instance for app.
 ///
 class IO_mem
 {

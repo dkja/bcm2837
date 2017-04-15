@@ -9,7 +9,6 @@ namespace GPIO
 
     ///
     /// Select function for GPIO pin 
-    /// Eg. Select "output" for "pin05"
     ///
     void GPIO_driver::set_function(GPIO_pins pin, Funct f)
     {
@@ -40,7 +39,7 @@ namespace GPIO
     }
 
     ///
-    /// Set pin's value as HIGH
+    /// Set pin's value as LOW
     ///
     void GPIO_driver::clear(GPIO_pins pin)
     {

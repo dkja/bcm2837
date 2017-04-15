@@ -47,7 +47,7 @@ IO_mem::~IO_mem()
 }
 
 ///
-///	Map IO mamory to virtual memory
+///	Map IO-memory to virtual memory
 ///
 IO_mem::IO_mem()
 {
